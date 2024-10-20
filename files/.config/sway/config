@@ -177,6 +177,16 @@ input type:keyboard {
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
 #
+# Volume, brightness
+#
+    bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+    bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+    bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+    bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+    bindsym $mod+at exec wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+    bindsym $mod+slash exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+#
 # Resizing containers:
 #
 mode "resize" {

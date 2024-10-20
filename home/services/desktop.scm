@@ -1,11 +1,7 @@
-(define-module (my-home services desktop)
+(define-module (home services desktop)
   #:use-module (gnu)
   #:use-module (gnu packages))
 
-(define my-home-desktop-profile-service
-  (list sway
-        swayidle
-        swaylock
-        foot
-        fuzzel
-        wlgreet))
+(define (home-desktop-profile-service config)
+  (list ;; window manager
+        sway swayidle swaylock foot fuzzel mako grimshot))
