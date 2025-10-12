@@ -27,7 +27,7 @@
 ;; Bootstrap crafted-emacs in init.el
 ;; Adds crafted-emacs modules to the `load-path', sets up a module
 ;; writing template, sets the `crafted-emacs-home' variable.
-(load (expand-file-name "../../Projects/crafted-emacs/modules/crafted-init-config"
+(load (expand-file-name "$HOME/src/crafted-emacs/modules/crafted-init-config"
                         user-emacs-directory))
 ;; Adjust the path (e.g. to an absolute one)
 ;; depending where you cloned Crafted Emacs.
@@ -45,13 +45,13 @@
 
 ;; Add package definitions for completion packages
 ;; to `package-selected-packages'.
-(require 'crafted-completion-packages)
+; (require 'crafted-completion-packages)
 
 ;; Manually select "ef-themes" package
-(add-to-list 'package-selected-packages 'ef-themes)
+; (add-to-list 'package-selected-packages 'ef-themes)
 
 ;; Install the packages listed in the `package-selected-packages' list.
-(package-install-selected-packages :noconfirm)
+; (package-install-selected-packages :noconfirm)
 
 ;;; Configuration phase
 ;; Some example modules to configure Emacs. Don't blindly copy these,

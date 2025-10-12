@@ -13,7 +13,7 @@
 ;;; Code:
 
 ;; Set up package archives (configuring `package.el')
-(load (expand-file-name "../../Projects/crafted-emacs/modules/crafted-early-init-config"
+(load (expand-file-name "../../../../../crafted-emacs/modules/crafted-early-init-config"
                         user-emacs-directory))
 ;; Adjust the path (e.g. to an absolute one)
 ;; depending where you cloned Crafted Emacs.
