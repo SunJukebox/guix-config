@@ -48,19 +48,18 @@
     ;; Packages installed system-wide.  Users can also install packages
     ;; under their own account: use 'guix search KEYWORD' to search
     ;; for packages and 'guix install PACKAGE' to install a package.
-    (packages (cons* bluez
-                     bluez-alsa
-                     emacs
+    (packages (cons* ; bluez
+                     ; bluez-alsa
+                     emacs-no-x-toolkit
                      git
                      neovim
-                     recutils
+                     ; recutils
                      nix
                      %base-packages))
 
     ;; Below is the list of system services.  To search for available
     ;; services, run 'guix system search KEYWORD' in a terminal.
-    (services
-     (append (list
+    (services (cons*
               ;; Configure swaylock as a screen locker (c.f. System Configuration/Services/X Window)
               ;; (service screen-locker-service-type
               ;; (screen-locker-configuration (name "swaylock")
@@ -116,7 +115,7 @@
               (service colord-service-type)
               (service geoclue-service-type)
               (service polkit-service-type)
-              (service elogind-service-type)
+              ; (service elogind-service-type)
               (service dbus-root-service-type)
 
               (service ntp-service-type)
@@ -174,7 +173,7 @@
                                               (port-number 2222)))
               
               ;; Nix
-              (service nix-service-type))
+              (service nix-service-type)
 
              ;; This is the default list of services we
              ;; are appending to.
