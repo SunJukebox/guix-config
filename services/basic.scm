@@ -89,6 +89,7 @@
    (service thermald-service-type)
    (service tlp-service-type
             (tlp-configuration
+	     (stop-charge-thresh-bat0 80)
              ;; (cpu-boost-on-ac? #t)
              (wifi-pwr-on-bat? #t)))
 
