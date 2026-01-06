@@ -18,6 +18,7 @@
 
   #:use-module (nongnu packages)
   #:use-module (nongnu packages editors)
+  #:use-module (nongnu packages productivity)
 
   ;; #:use-module (anon home services)
   #:use-module (anon home services dotfiles)
@@ -94,9 +95,8 @@
               neovim
               tree-sitter-cli
               texlab
-
               ;; vscodium
-              
+               
               ;; media
               inkscape
               imv
@@ -132,12 +132,13 @@
               font-adobe-source-han-sans
               font-google-noto-emoji
 
-              ;; books, pdf & djvu
-              zathura
-              zathura-djvu
-              zathura-pdf-mupdf
-              okular
-              calibre
+               ;; books, pdf & djvu
+               zathura
+               zathura-djvu
+               zathura-pdf-mupdf
+               okular
+               calibre
+               zotero
 
               qtwayland
 
