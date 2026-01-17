@@ -75,7 +75,7 @@
 
    (packages (cons* btop
                     curl
-                    emacs-no-x-toolkit
+                    ;; emacs-no-x-toolkit
                     git
                     neovim
                     nix
